@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aleš Hruška</title>
+<meta name="description" content="Aleš Hruška, student Otevřené informatiky na MENDELU v Brně. Projekty v Pythonu, Javě a C++.">
+<style>
+  :root{
+    --bg:#fafaf7; --fg:#1d1f22; --muted:#62666d; --line:#e3e2dc; --accent:#2f5d50; --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:17px/1.6 Georgia,"Times New Roman",serif}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 22px 72px}
+  .sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--accent)}
+  a:hover{text-decoration-thickness:2px}
+
+  header{display:flex;gap:22px;align-items:center;margin-bottom:40px}
+  header img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+  h1{font-size:34px;line-height:1.15;margin:0 0 4px;font-weight:normal}
+  .sub{color:var(--muted);font-size:15px;margin:0}
+  .links{margin-top:8px;font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;margin:44px 0 14px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  p{margin:0 0 12px}
+
+  .proj{border-bottom:1px solid var(--line);padding:16px 0}
+  .proj:last-child{border-bottom:0}
+  .proj h3{font-size:19px;font-weight:normal;margin:0 0 4px}
+  .proj h3 a{text-decoration:none}
+  .proj h3 a:hover{text-decoration:underline}
+  .proj p{margin:0 0 6px;font-size:16px}
+  .tags{font-size:13px;color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);font-style:italic}
+
+  .skills{display:grid;grid-template-columns:130px 1fr;gap:6px 16px;font-size:15px}
+  .skills dt{color:var(--muted)}
+  .skills dd{margin:0}
+
+  .cv{display:grid;grid-template-columns:130px 1fr;gap:4px 16px;font-size:15px;margin-bottom:14px}
+  .cv .when{color:var(--muted)}
+
+  footer{margin-top:56px;font-size:13px;color:var(--muted)}
+  @media (max-width:560px){
+    header{flex-direction:column;align-items:flex-start}
+    .skills,.cv{grid-template-columns:1fr;gap:2px}
+    .skills dt,.cv .when{margin-top:8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="foto.jpg" alt="Aleš Hruška">
+    <div>
+      <h1>Aleš Hruška</h1>
+      <p class="sub sans">Student Otevřené informatiky · PEF MENDELU · Brno</p>
+      <div class="links sans">
+        <a href="https://github.com/xhruska1">GitHub</a>
+        <a href="mailto:hruskaales182@gmail.com">hruskaales182@gmail.com</a>
+        <a href="tel:+420733242280">+420 733 242 280</a>
+      </div>
+    </div>
+  </header>
+
+  <h2 class="sans">O mně</h2>
+  <p>Jsem ve druhém ročníku Otevřené informatiky na Mendelově univerzitě. Nejvíc mě baví věci, které reálně něco dělají: automatizace, propojení softwaru s hardwarem a malé nástroje, které mi ušetří čas. Poslední dobou hodně zkouším, kam se dá v takových projektech zapojit AI.</p>
+  <p>Před vysokou jsem vystudoval ekonomiku a podnikání se zaměřením na informatiku. Vedle školy pracuju, takže vím, co je zodpovědnost a dochvilnost. Hledám brigádu nebo částečný úvazek v IT v Brně.</p>
+
+  <h2 class="sans">Projekty</h2>
+
+  <div class="proj">
+    <h3><a href="https://github.com/xhruska1/investicni-hlidac">Investiční hlídač</a></h3>
+    <p>Každé ráno stáhne ceny vybraných ETF, zlata a bitcoinu, vyhodnotí moje pravidla a když se něco splní, pošle mi upozornění na mobil s krátkým komentářem od AI. Běží sám přes GitHub Actions.</p>
+    <div class="tags sans">Python · pandas · yfinance · GitHub Actions · Claude Code · ntfy</div>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/xhruska1/arduino-iot-backend">Arduino IoT backend</a></h3>
+    <p>REST API, které přes sériovou linku čte z Arduina teplotu a světlo a ovládá RGB LED. Má automatický a ruční režim a simulaci, takže se dá vyvíjet i bez hardwaru.</p>
+    <div class="tags sans">Python · Flask · pyserial · Arduino</div>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/xhruska1/hexlab-trenazer">HexLab</a></h3>
+    <p>Webový trenažér na rozbor síťových rámců z hex výpisu (Ethernet, IPv4/IPv6, ARP, TCP/UDP, DNS). Používám ho na přípravu na zápočet z Počítačových sítí.</p>
+    <div class="tags sans">HTML · CSS · JavaScript</div>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/xhruska1/stinovy-pisar">Stínový písař</a></h3>
+    <p>Desktopová aplikace na psaní všemi deseti. Píšeš proti „stínu“ svého nejlepšího pokusu, výsledky se ukládají do žebříčku.</p>
+    <div class="tags sans">Python · Tkinter · SQLite · PyInstaller</div>
+  </div>
+
+  <div class="proj">
+    <h3>Včelín</h3>
+    <p>Evidence včelstev v Javě: stanoviště, prohlídky, medobraní, statistiky, ukládání do JSON a unit testy.</p>
+    <div class="tags sans">Java 17 · Maven · Gson · JUnit 5</div>
+    <div class="note sans">Semestrální projekt, rozpracováno (do ledna 2027).</div>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/xhruska1/dungeon-zoo-cpp">Karak RPG</a></h3>
+    <p>Konzolová dungeon hra v C++. Můj první větší objektový projekt: dědičnost, polymorfismus a návrh v UML.</p>
+    <div class="tags sans">C++ · CMake · UML</div>
+  </div>
+
+  <h2 class="sans">Co umím</h2>
+  <dl class="skills sans">
+    <dt>Jazyky</dt><dd>Python, Java, C++, JavaScript, HTML/CSS, SQL</dd>
+    <dt>Nástroje</dt><dd>Git a GitHub, GitHub Actions, IntelliJ IDEA, CLion, Maven, CMake, Arduino IDE</dd>
+    <dt>Oblasti</dt><dd>automatizace, REST API, IoT, počítačové sítě, OOP a návrhové vzory, databáze</dd>
+    <dt>Ostatní</dt><dd>ECDL, MS Office, řidičský průkaz sk. B</dd>
+    <dt>Jazyky řeči</dt><dd>čeština (rodilý mluvčí), angličtina B1 (Cambridge), němčina základy</dd>
+  </dl>
+
+  <h2 class="sans">Vzdělání a práce</h2>
+  <div class="cv sans">
+    <div class="when">2025 – dosud</div>
+    <div><b>Mendelova univerzita v Brně</b>, PEF, Otevřená informatika<br><span style="color:var(--muted)">2. ročník, celý 1. ročník splněný</span></div>
+  </div>
+  <div class="cv sans">
+    <div class="when">2021 – 2025</div>
+    <div><b>VOŠ a SŠ Boskovice</b>, Ekonomika a podnikání, zaměření na informatiku (maturita)</div>
+  </div>
+  <div class="cv sans">
+    <div class="when">2026 – dosud</div>
+    <div><b>Lidl</b>, brigáda na prodejně</div>
+  </div>
+  <div class="cv sans">
+    <div class="when">2022 – 2026</div>
+    <div><b>Tesco</b> (přes agenturu), doplňování zboží a práce se skladovými zásobami</div>
+  </div>
+  <div class="cv sans">
+    <div class="when">2021 – 2024</div>
+    <div><b>ATONA s.r.o.</b>, příprava a povrchová úprava kovových dílů</div>
+  </div>
+
+  <footer class="sans">© 2026 Aleš Hruška</footer>
+</div>
+</body>
+</html>
